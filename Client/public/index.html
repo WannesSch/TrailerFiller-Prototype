@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <title>StageCo - TrailerFiller</title>
+</head>
+<body>
+    <div class="Message">Error message</div>
+    <div class="darkOverlay">
+        <div class="menu">
+            <div class="CreateAsset CreateMenu">
+                <h1>Create new Asset</h1>
+                <form action="/CreateAsset" method="POST" id="CreateAssetForm">
+                    <input type="text" placeholder="Asset Name" id="Asset_Name" name="AssetName" id="assetNameInput" required>
+                    <input type="number" placeholder="Asset Weight" id="Asset_Weight" name="AssetWeight" id="assetWeightInput" required>
+                    <small>Dimensions in cm</small>
+                    <div class="row">
+                        <label for="assetWidthInput">Width</label>
+                        <input type="number" name="AssetWidth" id="assetWidthInput" min="1" id="DimensionsInput">
+                        <small>X</small>
+                        <label for="assetWidthInput">Height</label>
+                        <input type="number" name="AssetHeight" id="assetWidthInput" min="1">
+                        <small>X</small>
+                        <label for="assetWidthInput">Depth</label>
+                        <input type="number" name="AssetDepth" id="assetWidthInput" min="1">
+                    </div>
+                    <select id="AssetGroupSelect" name="AssetGroup"></select>
+                    <input type="submit" value="Save">
+                </form>
+                <button id="Asset_Return">Go back</button>
+            </div>
+            <div class="CreateAssetGroup CreateMenu">
+                <h1>Create new AssetGroup</h1>
+                <form action="/CreateAssetGroup" method="POST" id="CreateAssetGroupForm">
+                    <input type="text" placeholder="AssetGroup Name" id="AssetGroup_Name" name="AssetGroupName" id="assetGroupNameInput" required>
+                    <input type="text" placeholder="AssetGroup Description" id="AssetGroup_Description" name="AssetGroupDescription" id="assetGroupDescInput" required>
+                    <input type="submit" value="Save">
+                </form>
+                <button id="Asset_Return">Go back</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <img src="./Images/Main/Stageco_logo.png" alt="">
+        <nav>
+            <button>New Trailer</button>
+            <button id="AssetMenuButton">Create Asset</button>
+            <button id="AssetGroupMenuButton">Create AssetGroup</button>
+            <button>Login</button>
+        </nav>
+    </header>
+
+    <div class="menuWrapper">
+        <div class="ButtonWrapper">
+            <div class="hamburger-menu toggle">
+                <div class="bar-top"></div>
+                <div class="bar-middle"></div>
+                <div class="bar-bottom"></div>
+              </div>
+        </div>
+        <input type="search" name="searchbar" id="searchBar" placeholder="Search asset">
+        <ul class="assetMenu"></ul>
+    </div>
+
+    <div class="viewMenu">
+        <div class="viewButton rotate"></div>
+        <div class="viewButton top"></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="trailer trailer-front">
+            <div class="grid"></div>
+        </div>
+
+        <!-- <div class="trailer trailer-top">
+            <div class="grid"></div>
+        </div> -->
+
+        <!-- <div class="information">
+            <p>Weight: <span id="weight">0000</span>kg</p>
+            
+        </div> -->
+    </div>
+
+    
+    
+
+
+    <footer>
+        <p>WebApplication by Wannes Schillebeeckx &#xa9;</p>
+    </footer>
+
+    <script src="/JavaScript/index.js" type='module'></script>
+</body>
+</html>

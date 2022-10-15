@@ -1,0 +1,24 @@
+{
+  "name": "trailerfiller",
+  "version": "1.0.0",
+  "description": "Stageco TrailerFiller prototype",
+  "main": "./Server/Startup.js",
+  "scripts": {
+    "prestart": "clear",
+    "start": "node ./Server/Startup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WannesSch/TrailerFiller-Prototype.git"
+  },
+  "keywords": [
+    "Trailer",
+    "Stageco"
+  ],
+  "author": "Wannes Schillebeeckx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WannesSch/TrailerFiller-Prototype/issues"
+  },
+  "homepage": "https://github.com/WannesSch/TrailerFiller-Prototype#readme"
+}
